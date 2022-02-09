@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="onNewNotes()">New Notes</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-notes-item
+        *ngFor="let notesEl of notes; let i of index"
+        [notes]="notesEl"
+        [index] = "i"></app-notes-item>
+    </div>
+  </div>
+  
+  
