@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-5">
+      <app-notes-list></app-notes-list>
+    </div>
+    <div class="col-md-7">
+      <app-notes-detail
+        *ngIf="selectedNotes; else infoText"
+        [notes]="selectedNotes"></app-notes-detail>
+      <ng-template #infoText>
+        <p>Please select a Notes!</p>
+      </ng-template>
+    </div>
+  </div>
+  
